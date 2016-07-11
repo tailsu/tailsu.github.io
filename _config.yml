@@ -2,9 +2,9 @@ excerpt_separator: ""
 pygments: true
 markdown: kramdown
 url: http://tailsu.github.io
-title: Awesome
+title: The Sands of Time
 email: tailsu@gmail.com
 author: Stefan Dragnev
-description: My awesome new site
+description: Where code comes to die
 paginate: 3
 google_analytics: 
