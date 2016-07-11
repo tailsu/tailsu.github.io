@@ -24,7 +24,7 @@ Now we can make the lengthy call to ffmpeg. FFmpeg has a neat expression languag
 
 {% highlight python %}
 
-def make_thumb(video_filename)
+def make_thumb(video_filename):
 	# pad with black if W<H, crop to center if W>H, rescale to 300x300 if greater
 	
 	ff_filters = (f.replace(',', '\\,') for f in (
