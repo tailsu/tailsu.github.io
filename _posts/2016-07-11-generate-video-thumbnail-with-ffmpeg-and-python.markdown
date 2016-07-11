@@ -12,7 +12,7 @@ import subprocess
 
 def ffmpeg(*cmd):
 	try:
-		subprocess.check_output(['ffmpeg'] + cmd)
+		subprocess.check_output(['ffmpeg'] + list(cmd))
 	except subprocess.CalledProcessError:
 		return False
 
@@ -29,7 +29,7 @@ def make_thumb(video_filename):
 	
 	ff_filters = (f.replace(',', '\\,') for f in (
 		'pad=if(lt(iw,ih),ih,iw):ih:if(lt(iw,ih),(ih-iw)/2,0):0:black',
-		'crop=ih:ih:(iw-ih)/2:0'
+		'crop=ih:ih:(iw-ih)/2:0',
 		'scale=if(lt(iw,300),iw,300):if(lt(iw,300),iw,300)',
 	))
 	ff_filterstr = ','.join(ff_filters)
